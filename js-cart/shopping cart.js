@@ -141,7 +141,7 @@ var cart = {
       item = document.createElement("div");
       item.className = "c-total";
       item.id = "c-total";
-      item.innerHTML ="TOTAL: $" + total;
+      item.innerHTML ="TOTAL: £" + total;
       cart.hItems.appendChild(item);
 
       // This creates a empty button to click
