@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- This is my contact page most of the notes are in the index.html page-->
+  <title>Maj's Pet Shop</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="petshop.css">
+   
+
+
+
+</head>
+<body>
+  <!--I have borrowed the navbar from W3school link: https://www.w3schools.com/bootstrap5/bootstrap_navbar.php -->
+<!-- navbar starts here -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- My title and logo -->
+  <img src="images/PetShopLogo.png" alt="Logo" style="width:40px;" class="rounded-pill">
+  <a class="navbar-brand" href="index.html">Maj's Pet Shop</a>
+
+  <!-- Toggler/collapsibe Button, The button element represents a button labeled by its contents-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+   <!-- The nav bar will collaspe when resized to a different shape -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <!-- Navbar links which will allow me to navigate to different webpages pages -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="about us.html">About Us</a>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="contact us.html">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="js-cart/cart.html"><i class="fa fa-shopping-cart"></i> Go to basket</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Navbar ends here -->
+
+
+<!--I have created a container which will contain the contact information -->
+<div class="container contact-form">
+  <!--this class will centre my text-->
+  <div class="text-center my-5">
+    <h2>Contact Us!</h2>
+  </div>
+  <!--This creates a form-->  <!-- The id tag defines a unique identifier which must be unique in the whole document.-->
+  <form action="">
+    <input type="text" name="" class="form-control rounded-0" placeholder="FullName" required="">      <!--A placeholder describes the expected value of an input -->
+    <input type="text" name=""  class="form-control rounded-0" placeholder="Email" required="@">
+    <input type="number" name="" class="form-control rounded-0" placeholder="Phone Number" required="">
+    <!--The textarea tag represents a multiline plain text edit control for the element's raw value.-->
+    <textarea name="" rows="4" placeholder="Message" class="form-control" required="" ></textarea>
+    <!--This creates a submit button for users to click when sending a messege-->
+    <button type="submit" class="btn btn-dark">Send Message</button>
+  </form>
+</div>
+
+
+
+<footer class="bg-dark py-3 mt-5">
+  <div class="container text-secondary text-center">
+    © COPYRIGHT 2021 MAJ'S PET SHOP.
+  </div>
+</footer>
+
+</body>
+</html>

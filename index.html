@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Maj's Pet Shop</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--required Boostrap 5-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!--I have linked my css so I can alter and design the colour of my website-->
+<link rel="stylesheet" href="petshop.css">
+</head>
+<body>
+<!--I have borrowed the navbar from W3school link: https://www.w3schools.com/bootstrap5/bootstrap_navbar.php -->
+<!-- navbar start over here -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- My logo and title -->  <!--This attribute defines an alternative text description of the image. -->
+  <img src="images/PetShopLogo.png" alt="Logo" style="width:40px;" class="rounded-pill">
+  <!--Classes allows CSS and JavaScript to select and access specific elements-->
+                <!--Here I have aslo linked my home page so this redirect them back when clicked-->
+  <a class="navbar-brand" href="index.html">Maj's Pet Shop
+  </a>
+
+  <!-- Toggler/collapsibe Button, The button element represents a button labeled by its contents-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+ <!-- The nav bar will collaspe when resized to a different shape -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+         <!-- Navbar links which will allow me to navigate to different webpages pages -->
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+            <li class="nav-item">
+          <!--A herf contains a URL that links the hyper links-->
+        <a class="nav-link" href="about us.html">About Us</a>
+      </li>
+         <!--Here I have linked my images-->   
+         <li class="nav-item">
+        <a class="nav-link" href="contact us.html">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <!--Here I have linked my cart using a herf tag-->
+        <a class="nav-link" href="js-cart/cart.html"><i class="fa fa-shopping-cart"></i> Go to basket</a>
+      </li>
+    </ul>
+    <!--The div element has no special meaning at all. It represents its children, this also seperates the coding-->
+  </div>
+</nav>
+<!-- navbar ends here -->
+
+  <div class="container text-center mt-5">
+    <h1>Welcome to Maj's Pet Shop</h1>
+<!-- This sets the image and shows on each slide-->
+<div id="demo" class="carousel slide" data-bs-ride="carousel"> 
+  <div class="carousel-indicators"> <!-- creates three slides on this carousel, and adds a button on the bottom for each-->
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class=""></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class=""></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item carousel-item-next carousel-item-start"> <!-- sets the image on each carousel slide-->
+      <img src="images/cat2.jpg" alt="cat2" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="images/dog3.jpg" alt="dog2" class="d-block w-100"> <!--linked my images from my image folder-->
+    </div>
+    <div class="carousel-item active carousel-item-start">
+      <img src="images/hamster2.jpg" alt="hamster2" class="d-block w-100">
+    </div>
+  </div>
+  <!-- This creates a button that goes to the previous slide of the carousel-->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev"> 
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <!-- This creates a button that goes to the next slide of the carousel-->
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next"> 
+    <span class="carousel-control-next-icon"></span>
+  </button>
+    </div>
+
+    </div>
+    <!--This creates a row-->
+    <div class="row mt-4">
+      <h1>Pets that are avaialble in store!</h1>
+      <!--created a column to insert my pets and present to customers-->
+      <div class="col-md-3">
+        <img src="images/cat2.jpg" alt="" class="img-fluid img-thumbnail">
+      </div>
+            <div class="col-md-3">            
+        <img src="images/hamster2.jpg" alt="" class="img-fluid img-thumbnail">
+      </div>
+            <div class="col-md-3">
+        <img src="images/dog2.jpg" alt="" class="img-fluid img-thumbnail">
+      </div>
+            <div class="col-md-3">    <!--Here I have created a class which makes the images to be responsive with thumbnail border-->
+        <img src="images/cat3.jpg" alt="" class="img-fluid img-thumbnail">
+      </div>
+    </div>
+  </div>
+<!--This centres my text and I have also created a button that will direct customers to the shopping cart -->
+  <div class="text-center my-5">
+    <!--linked to my javascript using a herf tag-->  <!--created a warning border which outlines the button to make it look appealing to click-->
+    <a href="js-cart/cart.html" class="btn btn-dark btn-lg rounded-0 border border-warning">Purchase Now</a>
+  </div>
+
+<!--Here I have created a footer so I can add my copyright (dont know why i added that felt like I needed to :o )-->
+<footer class="bg-dark py-3 mt-5">
+  <div class="container text-secondary text-center">
+ © COPYRIGHT 2021 MAJ'S PET SHOP.
+  </div>
+</footer>
+
+</body>
+</html>
+  
