@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/* Here I have used css to stylise my carousel (didnt really make a difference) */
+.carousel-item{
+	height: 600px;
+	/* background position specifies the start position of the background image after any resizing */
+	background-position: center;
+	/* Specifies how background images are tiled after they have been sized and positioned. */
+	background-repeat: no-repeat;
+	/* the size of the back ground*/
+	background-size: cover;
+}
+.navbar{
+	padding: 1rem 2rem;
+}
+/* I have made the text of the link to white */
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+	/* Here I have adjusted the font size of the text/links that displays on the navvbar*/
+    font-size: 22px;
+}
+.navbar-dark .navbar-brand {
+    color: #ffffff;
+    font-size: 32px;
+}
+
+/* This allows me to size the contact page */
+.contact-form{
+	margin: 80px auto 350px auto;
+}
+.contact-form form .form-control
+	
+
+.contact-form span{
+	display: block;
+	margin-bottom: 20px;
+	color: red;
+}
+.contact-form button{
+	margin-top: 20px;
+}
