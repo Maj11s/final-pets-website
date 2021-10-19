@@ -11,48 +11,44 @@
 <link rel="stylesheet" href="petshop.css">
 </head>
 <body>
+
+<!--The nav bar starts here-->
 <!--I have borrowed the navbar from W3school link: https://www.w3schools.com/bootstrap5/bootstrap_navbar.php -->
 <!-- navbar start over here -->
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <!-- My logo and title -->  <!--This attribute defines an alternative text description of the image. -->
-  <img src="images/PetShopLogo.png" alt="Logo" style="width:40px;" class="rounded-pill">
-  <!--Classes allows CSS and JavaScript to select and access specific elements-->
-                <!--Here I have aslo linked my home page so this redirect them back when clicked-->
-  <a class="navbar-brand" href="index.html">Maj's Pet Shop
-  </a>
-
-  <!-- Toggler/collapsibe Button, The button element represents a button labeled by its contents-->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
- <!-- The nav bar will collaspe when resized to a different shape -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#"></a>
-      </li>
-      <li class="nav-item">
-         <!-- Navbar links which will allow me to navigate to different webpages pages -->
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-            <li class="nav-item">
-          <!--A herf contains a URL that links the hyper links-->
-        <a class="nav-link" href="about us.html">About Us</a>
-      </li>
-         <!--Here I have linked my images-->   
-         <li class="nav-item">
-        <a class="nav-link" href="contact us.html">Contact Us</a>
-      </li>
-      <li class="nav-item">
-        <!--Here I have linked my cart using a herf tag-->
-        <a class="nav-link" href="js-cart/cart.html"><i class="fa fa-shopping-cart"></i> Go to basket</a>
-      </li>
-    </ul>
-    <!--The div element has no special meaning at all. It represents its children, this also seperates the coding-->
-  </div>
-</nav>
-<!-- navbar ends here -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- My logo and title -->  <!--This attribute defines an alternative text description of the image. -->
+    <img src="images/PetShopLogo.png" alt="Logo" style="width:40px;" class="rounded-pill">
+    <!--Classes allows CSS and JavaScript to select and access specific elements-->
+    <div class="container-fluid">
+       <!--Here I have aslo linked my home page so this redirect them back when clicked-->
+      <a class="navbar-brand" href="index.html">Maj's Pet Shop</a>
+      <!-- Toggler/collapsibe Button, The button element represents a button labeled by its contents-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+       <!-- The nav bar will collaspe when resized to a different size -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+             <!-- Navbar links which will allow me to navigate to different webpages pages -->
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <!--A herf contains a URL that links the hyper links-->
+            <a class="nav-link" href="about us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact us.html">Contact us</a>
+          </li>   
+          <li class="nav-item">
+            <a class="nav-link" href="js-cart/cart.html"><i class="fa fa-shopping-cart"></i> Shopping cart</a>
+          </li>   
+        </ul>
+      </div>
+          <!--The div element has no special meaning at all. It represents its children, this also seperates the coding-->
+    </div>
+  </nav>
+  <!--The nav bar ends here-->
 
   <div class="container text-center mt-5">
     <h1>Welcome to Maj's Pet Shop</h1>
