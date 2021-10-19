@@ -5,6 +5,7 @@ var cart = {
   items : {}, // Current pets in cart
   iURL : "../images/", // Pets images URL folder
 
+  //Thhsi function will save information in the session storage//
   save : function () {
     sessionStorage.setItem("cart", JSON.stringify(cart.items));
   },
@@ -18,22 +19,23 @@ var cart = {
   },
 
   // This function will clear and empty entire cart with a pop-up diolog//
-  nuke : function () {
-    if (confirm("Empty cart?")) {
+  delete : function () {
+    if (confirm("Empty your shopping cart?")) {
       cart.items = {};
-      // sessionStorage will store data only for a session/temporary this will clear data when the browser is closed//
+     // sessionStorage will store data only for a session/temporary this will clear data when the browser is closed,
+     // this will also remove all the data from the session storage
       sessionStorage.removeItem("cart");
       cart.list();
     }
   },
 
-  //  
+ 
   init : function () {
     // the getElement returns a reference to the first object with the specified value.
     cart.hPdt = document.getElementById("cart-products");
     cart.hItems = document.getElementById("cart-items");
 
-    // (C2) DRAW PRODUCTS LIST
+    // This will create the lists of pets
     cart.hPdt.innerHTML = "";
     let p, item, part;
     for (let id in products) {
@@ -62,7 +64,7 @@ var cart = {
       part.className = "p-desc";
       item.appendChild(part);
 
-      // The price of the pets//
+      // The price of the pets
       part = document.createElement("div");
       part.innerHTML = "£" + p.price;
       part.className = "p-price";
@@ -85,7 +87,7 @@ var cart = {
     cart.hItems.innerHTML = "";
     let item, part, pdt;
     let empty = true;
-    for (let key in cart.items) {
+    for (let key in cart.items) { //
       if(cart.items.hasOwnProperty(key)) { empty = false; break; }
     }
 
@@ -98,7 +100,7 @@ var cart = {
 
     // This shows the pets inside the cart
     else {
-      let p, total = 0, subtotal = 0;
+      let p, total = 0, subtotal = 0; // this just creates three variables
       for (let id in cart.items) {
         // The type of pet
         p = products[id];
@@ -132,12 +134,12 @@ var cart = {
         part.addEventListener("change", cart.change);
         item.appendChild(part);
 
-        // calculates the sub total of pets//
+        // calculates the sub total of pets
         subtotal = cart.items[id] * p.price;
-        total += subtotal;
+        total += subtotal; // This calculate overall pets prices in the shopping cart
       }
 
-      // Adds up the total amount
+      // Adds up the total amount of pets and displaying that in a div
       item = document.createElement("div");
       item.className = "c-total";
       item.id = "c-total";
@@ -149,7 +151,7 @@ var cart = {
       item = document.createElement("input");
       item.type = "button";
       item.value = "Empty";
-      item.addEventListener("click", cart.nuke);
+      item.addEventListener("click", cart.delete); //when clicking the delete button this will clear the pets
       item.className = "c-empty cart";
       cart.hItems.appendChild(item);
 
@@ -163,12 +165,12 @@ var cart = {
     }
   },
 
-  // (E) ADD ITEM INTO CART
+  // This will essentially add pets into the cart
   add : function () {
-    if (cart.items[this.dataset.id] == undefined) {
-      cart.items[this.dataset.id] = 1;
+    if (cart.items[this.dataset.id] == undefined) { //if nothing 
+      cart.items[this.dataset.id] = 1; // if this data set isnt empty it will then add 1 to it
     } else {
-      cart.items[this.dataset.id]++;
+      cart.items[this.dataset.id]++; // This will keep adding pets into the shopping cart
     }
     cart.save();
     cart.list();
@@ -177,18 +179,18 @@ var cart = {
   // (F) CHANGE QUANTITY
   change : function () {
     // (F1) REMOVE ITEM
-    if (this.value <= 0) {
-      delete cart.items[this.dataset.id];
+    if (this.value <= 0) { //if the value is equal to or less than 0 it remove pets from the shopping cart
+      delete cart.items[this.dataset.id]; 
       cart.save();
       cart.list();
     }
 
-    // (F2) UPDATE TOTAL ONLY
+    // UPDATE TOTAL ONLY
     else {
       cart.items[this.dataset.id] = this.value;
-      var total = 0;
+      var total = 0; // creates a variable
       for (let id in cart.items) {
-        total += cart.items[id] * products[id].price;
+        total += cart.items[id] * products[id].price; // it gets the pet prices to the total amount and re-calculating it.
         document.getElementById("c-total").innerHTML ="TOTAL: £" + total;
       }
     }
@@ -201,7 +203,7 @@ var cart = {
     cart.list();
   },
 
-  // This pop-up with a diolog that the purchase is complete//
+  // This will pop-up with an alert box that the purchase is complete//
   checkout : function () {
     // SEND DATA TO SERVER
     // CHECKS

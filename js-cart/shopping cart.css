@@ -14,8 +14,8 @@
 input.cart, button.cart {
   padding: 10px;
   border: 0;
-      background: #0d18aa;
-  color: #fff;
+      background: #0026ff;
+  color: rgb(255, 255, 255);
   font-weight: 700;
   cursor: pointer;
 }
@@ -28,7 +28,7 @@ input.cart, button.cart {
 }
 .p-item {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid rgb(255, 145, 0);
   border-radius: 5px;
   text-align: center;
 }
@@ -44,10 +44,10 @@ input.cart, button.cart {
 .p-price { font-size: 1.35em; }
 input.p-add { width: 70%; }
 
-/* This is for the current listed pets */
+/* This is the shopping cart */
 #cart-items {
-  background: #31394d;
-  color: #fff;
+  background: #0248f8;
+  color: rgb(255, 255, 255);
   border-radius: 5px;
 }
 .c-item {
