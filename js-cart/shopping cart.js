@@ -5,6 +5,7 @@ var cart = {
   items : {}, // Current pets in cart
   iURL : "../images/", // Pets images URL folder
 
+  //Thhsi function will save information in the session storage//
   save : function () {
     sessionStorage.setItem("cart", JSON.stringify(cart.items));
   },
@@ -19,21 +20,21 @@ var cart = {
 
   // This function will clear and empty entire cart with a pop-up diolog//
   nuke : function () {
-    if (confirm("Empty cart?")) {
+    if (confirm("Empty your shopping cart?")) {
       cart.items = {};
-      // sessionStorage will store data only for a session/temporary this will clear data when the browser is closed//
+      // sessionStorage will store data only for a session/temporary this will clear data when the browser is closed
       sessionStorage.removeItem("cart");
       cart.list();
     }
   },
 
-  //  
+ 
   init : function () {
     // the getElement returns a reference to the first object with the specified value.
     cart.hPdt = document.getElementById("cart-products");
     cart.hItems = document.getElementById("cart-items");
 
-    // (C2) DRAW PRODUCTS LIST
+    // This will create the lists of pets
     cart.hPdt.innerHTML = "";
     let p, item, part;
     for (let id in products) {
@@ -62,7 +63,7 @@ var cart = {
       part.className = "p-desc";
       item.appendChild(part);
 
-      // The price of the pets//
+      // The price of the pets
       part = document.createElement("div");
       part.innerHTML = "£" + p.price;
       part.className = "p-price";
