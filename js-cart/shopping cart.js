@@ -5,14 +5,14 @@ var cart = {
   items : {}, // Current pets in cart
   iURL : "../images/", // Pets images URL folder
 
-  //Thhsi function will save information in the local storage//
+  //Thhsi function will save information in the session storage//
   save : function () {
-    localStorage.setItem("cart", JSON.stringify(cart.items));
+    sessionStorage.setItem("cart", JSON.stringify(cart.items));
   },
 
   // This will load the cart from session storage //
   load : function () {
-    cart.items = localStorage.getItem("cart");
+    cart.items = sessionStorage.getItem("cart");
     // The if and the else statement executes a code if a specific condition is true //
     if (cart.items == null) { cart.items = {}; }
     else { cart.items = JSON.parse(cart.items); }
@@ -23,8 +23,8 @@ var cart = {
     if (confirm("Empty your shopping cart?")) {
       cart.items = {};
      // sessionStorage will store data only for a session/temporary this will clear data when the browser is closed,
-     // this will also remove all the data from the local storage
-      localStorage.removeItem("cart");
+     // this will also remove all the data from the session storage
+      sessionStorage.removeItem("cart");
       cart.list();
     }
   },
