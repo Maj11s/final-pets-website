@@ -1,5 +1,5 @@
 
-var products = {
+var petlist = {
   123: {
     name : "Ginger Hamster",
     desc : "Cute Hamster that is 10 days old",

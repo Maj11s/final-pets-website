@@ -11,7 +11,7 @@ var cart = {
   },
 
   // This will load the cart from session storage //
-  load : function () {
+  loadpets : function () {
     cart.items = sessionStorage.getItem("cart");
     // The if and the else statement executes a code if a specific condition is true //
     if (cart.items == null) { cart.items = {}; }
@@ -32,15 +32,15 @@ var cart = {
  
   init : function () {
     // the getElement returns a reference to the first object with the specified value.
-    cart.hPdt = document.getElementById("cart-products");
+    cart.hPdt = document.getElementById("cart-petlist");
     cart.hItems = document.getElementById("cart-items");
 
     // This will create the lists of pets
     cart.hPdt.innerHTML = "";
     let p, item, part;
-    for (let id in products) {
+    for (let id in petlist) {
       // WRAPPER
-      p = products[id];
+      p = petlist[id];
       item = document.createElement("div");
       item.className = "p-item";
       cart.hPdt.appendChild(item);
@@ -103,7 +103,7 @@ var cart = {
       let p, total = 0, subtotal = 0; // this just creates three variables
       for (let id in cart.items) {
         // The type of pet
-        p = products[id];
+        p = petlist[id];
         item = document.createElement("div");
         item.className = "c-item";
         cart.hItems.appendChild(item);
@@ -190,7 +190,7 @@ var cart = {
       cart.items[this.dataset.id] = this.value;
       var total = 0; // creates a variable
       for (let id in cart.items) {
-        total += cart.items[id] * products[id].price; // it gets the pet prices to the total amount and re-calculating it.
+        total += cart.items[id] * petlist[id].price; // it gets the pet prices to the total amount and re-calculating it.
         document.getElementById("c-total").innerHTML ="TOTAL: £" + total;
       }
     }

@@ -1,15 +1,15 @@
-/* (A) ENTIRE PAGE */
+/* This css stylizes the webpage for my shopping cart*/
 #cart-wrap {
   font-family: arial, sans-serif;
   display: flex;
   margin: 0 auto;
   max-width: 1000px;
 }
-#cart-products, #cart-items {
+#cart-petlist, #cart-items {
   box-sizing: border-box;
   padding: 10px;
 }
-#cart-products { width: 70%; }
+#cart-petlist { width: 70%; }
 #cart-items { width: 30%; }
 input.cart, button.cart {
   padding: 10px;
@@ -21,7 +21,7 @@ input.cart, button.cart {
 }
 
 /* CSS for pets listed in the shopping cart */
-#cart-products {
+#cart-petlist {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 10px;
@@ -48,7 +48,7 @@ input.p-add { width: 70%; }
 #cart-items {
   background: #0248f8;
   color: rgb(255, 255, 255);
-  border-radius: 5px;
+  border-radius: 30px;
 }
 .c-item {
   padding: 10px 0;
@@ -68,5 +68,5 @@ input.p-add { width: 70%; }
 /* (D) RESPONSIVE */
 @media screen AND (max-width: 768px) {
   #cart-wrap { grid-template-columns: 60% 40%; }
-  #cart-products { grid-template-columns: auto; }
+  #cart-petlist { grid-template-columns: auto; }
 }
