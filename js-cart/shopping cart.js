@@ -1,5 +1,5 @@
 var cart = {
-  // (A) PROPERTIES
+  // the null indicate that the variable does not refer to any object 
   hPdt : null, // HTML pet list
   hItems : null, // HTML current cart
   items : {}, // Current pets in cart
@@ -39,10 +39,12 @@ var cart = {
     cart.hPdt.innerHTML = "";
     let p, item, part;
     for (let id in petlist) {
-      // WRAPPER
+      // This part of the code creates the list of pets
       p = petlist[id];
       item = document.createElement("div");
-      item.className = "p-item";
+      // ClassName is referenced from: https://developer.mozilla.org/en-US/docs/Web/API/Element/className
+      //The class name gets and sets the value of the class attribute of the specified element
+      item.className = "p-list";
       cart.hPdt.appendChild(item);
 
       // Pet Images
@@ -52,7 +54,7 @@ var cart = {
       //An appendChild allows you to add a node to the end of the list.
       item.appendChild(part);
 
-      // The type of pet
+      // The type of pets
       part = document.createElement("div");
       part.innerHTML = p.name;
       part.className = "p-name";
@@ -67,14 +69,17 @@ var cart = {
       // The price of the pets
       part = document.createElement("div");
       part.innerHTML = "£" + p.price;
-      part.className = "p-price";
+      part.className = "p-prices";
       item.appendChild(part);
 
       // This allows add pets into the cart//
       part = document.createElement("input");
+      // they type Returns the content type of the object.
       part.type = "button";
+      // the value Returns the value of the data at the cursor's current position
       part.value = "Add to Cart";
       part.className = "cart p-add";
+      // The onClick triggers when the user clicks the left mouse button on the object
       part.onclick = cart.add;
       part.dataset.id = id;
       item.appendChild(part);
@@ -87,7 +92,8 @@ var cart = {
     cart.hItems.innerHTML = "";
     let item, part, pdt;
     let empty = true;
-    for (let key in cart.items) { //
+    for (let key in cart.items) { 
+      // hasOwnProperty tag identfies whether an object has a property with the specified name.
       if(cart.items.hasOwnProperty(key)) { empty = false; break; }
     }
 
@@ -143,6 +149,7 @@ var cart = {
       item = document.createElement("div");
       item.className = "c-total";
       item.id = "c-total";
+      //This will dislay the total in £
       item.innerHTML ="TOTAL: £" + total;
       cart.hItems.appendChild(item);
 
@@ -155,7 +162,7 @@ var cart = {
       item.className = "c-empty cart";
       cart.hItems.appendChild(item);
 
-      // CHECKOUT BUTTONS
+      // This will create a checkout button
       item = document.createElement("input");
       item.type = "button";
       item.value = "Checkout";
@@ -176,16 +183,16 @@ var cart = {
     cart.list();
   },
 
-  // (F) CHANGE QUANTITY
+  // This part of the code will change the quanitity of pets added into the shopping cart
   change : function () {
-    // (F1) REMOVE ITEM
+    // this will if statement will remove items out of the shopping cart
     if (this.value <= 0) { //if the value is equal to or less than 0 it remove pets from the shopping cart
       delete cart.items[this.dataset.id]; 
       cart.save();
       cart.list();
     }
 
-    // UPDATE TOTAL ONLY
+    // the else if statemnt will only update the total
     else {
       cart.items[this.dataset.id] = this.value;
       var total = 0; // creates a variable
@@ -205,23 +212,17 @@ var cart = {
 
   // This will pop-up with an alert box that the purchase is complete//
   checkout : function () {
-    // SEND DATA TO SERVER
-    // CHECKS
-    // SEND AN EMAIL
-    // RECORD TO DATABASE
-    // PAYMENT
-    // WHATEVER IS REQUIRED
     alert("Thanks for your purchase!");
 
-    /*
+    
     var data = new FormData();
     data.append('cart', JSON.stringify(cart.items));
-    data.append('products', JSON.stringify(products));
+    data.append('products', JSON.stringify(petlist));
+    //  can retrieve data from a URL without having to do a full page refresh.
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "SERVER-SCRIPT");
-    xhr.onload = function(){ ... };
+    xhr.onload = function(){  };
     xhr.send(data);
-    */
   }
 };
 window.addEventListener("DOMContentLoaded", cart.init);

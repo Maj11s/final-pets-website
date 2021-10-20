@@ -1,9 +1,11 @@
 *{
 	margin: 0;
+	/* the padding sets the thickness of the area */
 	padding: 0;
 }
 /* Here I have used css to stylise my carousel (didnt really make a difference) */
 .carousel-item{
+	/* the height of the content area, padding area or border area */
 	height: 600px;
 	/* background position specifies the start position of the background image after any resizing */
 	background-position: center;
@@ -11,8 +13,10 @@
 	background-repeat: no-repeat;
 	/* the size of the back ground*/
 	background-size: cover;
+
 }
 .navbar{
+	/* the padding sets the thickness of the area */
 	padding: 1rem 1rem;
 }
 /* I have made the text of the link to white */
@@ -26,11 +30,12 @@
     font-size: 32px;
 }
 
-/* This allows me to size the contact page */
+/* This allows me to re-size the contact page */
 .contact-form{
 	margin: 80px auto 350px auto;
 }
 
+/* this allows me to stylize and size the send messege button*/
 .contact-form button{
 	margin-top: 20px;
 }

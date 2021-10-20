@@ -9,6 +9,7 @@
   box-sizing: border-box;
   padding: 10px;
 }
+/*This stylizes the "add to cart" button */
 #cart-petlist { width: 70%; }
 #cart-items { width: 30%; }
 input.cart, button.cart {
@@ -26,13 +27,14 @@ input.cart, button.cart {
   grid-template-columns: auto auto;
   grid-gap: 10px;
 }
-.p-item {
+/* This stylizes the the pet list and adds a cool border */
+.p-list {
   padding: 10px;
-  border: 1px solid rgb(255, 145, 0);
+  border: 10px solid rgb(0, 0, 0);
   border-radius: 5px;
   text-align: center;
 }
-/*This */
+/*This does all the sizing and colour for my pet list in the shopping cart page */
 .p-img { max-width: 150px; }
 .p-name, .p-price { font-weight: 700; }
 .p-name, .p-desc, .p-price { margin: 5px 0; }
@@ -53,6 +55,7 @@ input.p-add { width: 70%; }
 .c-item {
   padding: 10px 0;
   display: flex;
+  /* the flex warp tag Controls whether the flex container is single-line or multi-line*/
   flex-wrap: wrap;
 }
 .c-item > * { box-sizing: border-box; }
@@ -65,8 +68,9 @@ input.p-add { width: 70%; }
   font-size: 1.2em;
 }
 
-/* (D) RESPONSIVE */
-@media screen AND (max-width: 768px) {
+/* The media tag is used to specify that the target URL is designed for special devices such mobile phones which makes it responsive */
+@media screen AND (max-width: 5000px) {
+  /* specifies, as a space-separated track list, the line names and track sizing functions of the grid.*/
   #cart-wrap { grid-template-columns: 60% 40%; }
   #cart-petlist { grid-template-columns: auto; }
 }
