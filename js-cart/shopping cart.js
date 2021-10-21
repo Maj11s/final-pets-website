@@ -39,11 +39,7 @@ var cart = {
     cart.hPdt.innerHTML = "";
     let p, item, part;
     for (let id in petlist) {
-<<<<<<< HEAD
-      // WRAPPER
-=======
       // This part of the code creates the list of pets
->>>>>>> 976538c9ce29dc71c83653d00788cffa0f47f7c0
       p = petlist[id];
       item = document.createElement("div");
       // ClassName is referenced from: https://developer.mozilla.org/en-US/docs/Web/API/Element/className
@@ -80,12 +76,8 @@ var cart = {
       part = document.createElement("input");
       // they type Returns the content type of the object.
       part.type = "button";
-<<<<<<< HEAD
-      part.value = "Add to Shopping Cart";
-=======
       // the value Returns the value of the data at the cursor's current position
       part.value = "Add to Cart";
->>>>>>> 976538c9ce29dc71c83653d00788cffa0f47f7c0
       part.className = "cart p-add";
       // The onClick triggers when the user clicks the left mouse button on the object
       part.onclick = cart.add;
