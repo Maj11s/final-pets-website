@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- This is my basket/cart page most of the comments have been commented on the index.html page-->
+    <!--This the title of the webpage-->
+    <title>Maj's Pet Shop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Very important required Boostrap 5 link here-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="pets.js"></script>
+    <script src="shopping cart.js"></script>
+     <link rel="stylesheet" href="shopping cart.css">
+     <!-- Here I have linked my petshop css using a / so that it directs and opens in the right file or folder-->
+  <link rel="stylesheet" href="../petshop.css">
+</head>
+
+<header>
+<!--The nav bar starts here-->
+<!--I have borrowed the navbar from W3school link: https://www.w3schools.com/bootstrap5/bootstrap_navbar.php -->
+<!-- navbar start over here -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <img src="../images/PetShopLogo.png" alt="Logo" style="width:40px;" class="rounded-pill"><!-- My logo and title -->  <!--This attribute defines an alternative text description of the image. -->
+  <!--Classes allows CSS and JavaScript to select and access specific elements-->
+  <div class="container-fluid">
+     <!--Here I have aslo linked my home page so this redirect them back when clicked-->
+    <a class="navbar-brand" href="../index.html">Maj's Pet Shop</a>
+    <!-- Toggler/collapsibe Button, The button element represents a button labeled by its contents-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <!-- The nav bar will collaspe when resized to a different size -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+           <!-- Navbar links which will allow me to navigate to different webpages pages -->
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <!--A herf contains a URL that links the hyper links-->
+          <a class="nav-link" href="../about us.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../contact us.html">Contact us</a>
+        </li>   
+        <li class="nav-item">
+          <a class="nav-link" href="shopping cart.html"><i class="fa fa-shopping-cart"></i> Shopping cart</a>
+        </li>   
+      </ul>
+    </div>
+        <!--The div element has no special meaning at all. It represents its children, this also seperates the coding-->
+  </div>
+</nav>
+<!--The nav bar ends here-->
+
+    <div id="cart-wrap" style="margin-top: 60px">
+      <!-- Pet list -->
+      <!--Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking.-->
+      <div id="cart-petlist"></div>
+
+      <!-- current pet list -->
+      <div id="cart-items"></div>
+    </div>
+
+
+  <footer class="bg-dark py-3 mt-5">
+      <div class="container text-secondary text-center">
+     © COPYRIGHT 2021 MAJ'S PET SHOP.
+      </div>
+  </footer>
+
+</body>
+</html>

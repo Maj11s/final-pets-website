@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 
+=======
+// I have declared my variable to petlist
+>>>>>>> 976538c9ce29dc71c83653d00788cffa0f47f7c0
 var petlist = {
   123: {
+    // Here I have named the type of pets, description, images and the price
     name : "Ginger Hamster",
     desc : "Cute Hamster that is 10 days old",
     img : "hamster2.jpg",
     price : 40
   },
-  124: {
+  124: {  //This is the string of the property
+    // the type of pet
     name : "Grey Cat",
     desc : "Cute cat that is 1 year old",
     img : "cat2.jpg",
@@ -16,6 +22,7 @@ var petlist = {
     name : "Fluffy Dog",
     desc : "Beautiful Cute Dog that is 1 year old",
     img : "dog3.jpg",
+    // the price of the pets
     price : 300
   },
   126: {
