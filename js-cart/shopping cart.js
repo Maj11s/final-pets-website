@@ -1,5 +1,4 @@
 var cart = {
-  // (A) PROPERTIES
   hPdt : null, // HTML pet list
   hItems : null, // HTML current cart
   items : {}, // Current pets in cart
@@ -38,9 +37,9 @@ var cart = {
     // This will create the lists of pets
     cart.hPdt.innerHTML = "";
     let p, item, part;
-    for (let id in products) {
+    for (let id in petlist) {
       // WRAPPER
-      p = products[id];
+      p = petlist[id];
       item = document.createElement("div");
       item.className = "p-item";
       cart.hPdt.appendChild(item);
@@ -73,7 +72,7 @@ var cart = {
       // This allows add pets into the cart//
       part = document.createElement("input");
       part.type = "button";
-      part.value = "Add to Cart";
+      part.value = "Add to Shopping Cart";
       part.className = "cart p-add";
       part.onclick = cart.add;
       part.dataset.id = id;
@@ -103,7 +102,7 @@ var cart = {
       let p, total = 0, subtotal = 0; // this just creates three variables
       for (let id in cart.items) {
         // The type of pet
-        p = products[id];
+        p = petlist[id];
         item = document.createElement("div");
         item.className = "c-item";
         cart.hItems.appendChild(item);
@@ -190,7 +189,7 @@ var cart = {
       cart.items[this.dataset.id] = this.value;
       var total = 0; // creates a variable
       for (let id in cart.items) {
-        total += cart.items[id] * products[id].price; // it gets the pet prices to the total amount and re-calculating it.
+        total += cart.items[id] * petlist[id].price; // it gets the pet prices to the total amount and re-calculating it.
         document.getElementById("c-total").innerHTML ="TOTAL: £" + total;
       }
     }
