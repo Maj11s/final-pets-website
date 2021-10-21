@@ -16,12 +16,8 @@
 
 }
 .navbar{
-<<<<<<< HEAD
-	padding: 2rem 2rem;
-=======
 	/* the padding sets the thickness of the area */
 	padding: 1rem 1rem;
->>>>>>> 976538c9ce29dc71c83653d00788cffa0f47f7c0
 }
 /* I have made the text of the link to white */
 .navbar-dark .navbar-nav .nav-link {

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-=======
 // I have declared my variable to petlist
->>>>>>> 976538c9ce29dc71c83653d00788cffa0f47f7c0
 var petlist = {
   123: {
     // Here I have named the type of pets, description, images and the price

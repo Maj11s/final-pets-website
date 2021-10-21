@@ -1,8 +1,5 @@
 var cart = {
-<<<<<<< HEAD
-=======
   // the null indicate that the variable does not refer to any object 
->>>>>>> 976538c9ce29dc71c83653d00788cffa0f47f7c0
   hPdt : null, // HTML pet list
   hItems : null, // HTML current cart
   items : {}, // Current pets in cart
