@@ -12,10 +12,15 @@
 <link rel="stylesheet" href="petshop.css">
   
 <script>
-
-
-
-
+{
+  function validateForm() {
+  let x = document.forms["forms"]["names"]["emails"]["numbers"]["messeges"].value;
+  if (x == "") {
+    alert("Must be not blank! Please fill it out");
+    return false;
+  }
+}
+}
 
 </script>
 
@@ -69,14 +74,14 @@
   </div>
   <!-- I have borrowed this form from: https://www.w3schools.com/html/html_forms.asp-->
   <!--This creates a form-->  <!-- The id tag defines a unique identifier which must be unique in the whole document.-->
-  <form action="">
-    <input type="text" name="" class="form-control rounded-0" placeholder="FullName" required=""> <!--A placeholder describes the expected value of an input -->
-    <input type="email" name=""  class="form-control rounded-0" placeholder="Email" required="">
-    <input type="number" name="" class="form-control rounded-0" placeholder="Phone Number" required="">
+  <form name="forms" action="/action_page.php" onsubmit="return validateForm()">
+    <input type="text" name="" class="form-control rounded-0" placeholder="FullName" name="names" required=""> <!--A placeholder describes the expected value of an input -->
+    <input type="email" name=""  class="form-control rounded-0" placeholder="Email" name="emails" required="">
+    <input type="number" name="" class="form-control rounded-0" placeholder="Phone Number" name="numbers" required="">
     <!--The textarea tag represents a multiline plain text edit control for the element's raw value.-->
-    <textarea name="" rows="4" placeholder="Message" class="form-control" required="" ></textarea>
+    <textarea name="" rows="4" placeholder="Message" class="form-control" name="messeges" required="" ></textarea>
     <!--This creates a submit button for users to click when sending a messege-->
-    <button type="submit" class="btn btn-dark">Send Message</button>
+    <button type="reset" class="btn btn-dark">Send Message</button>
   </form>
 </div>
 
