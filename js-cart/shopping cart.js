@@ -11,7 +11,7 @@ var cart = {
   },
 
   // This will load the cart from session storage //
-  loadpets : function () {
+  loadPets : function () {
     cart.items = sessionStorage.getItem("cart");
     // The if and the else statement executes a code if a specific condition is true //
     if (cart.items == null) { cart.items = {}; }
